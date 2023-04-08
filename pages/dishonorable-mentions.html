@@ -1,0 +1,460 @@
+<!-- 
+           _   _          _   ___     ____  __  ____   ____   _____   _______ ______ _____ _    _ _   _  ____  _      ____   _____ _____ ______  _____ 
+     /\   | \ | |   /\   | \ | \ \   / /  \/  |/ __ \ / __ \ / ____| |__   __|  ____/ ____| |  | | \ | |/ __ \| |    / __ \ / ____|_   _|  ____|/ ____|
+    /  \  |  \| |  /  \  |  \| |\ \_/ /| \  / | |  | | |  | | (___      | |  | |__ | |    | |__| |  \| | |  | | |   | |  | | |  __  | | | |__  | (___  
+   / /\ \ | . ` | / /\ \ | . ` | \   / | |\/| | |  | | |  | |\___ \     | |  |  __|| |    |  __  | . ` | |  | | |   | |  | | | |_ | | | |  __|  \___ \ 
+  / ____ \| |\  |/ ____ \| |\  |  | |  | |  | | |__| | |__| |____) |    | |  | |___| |____| |  | | |\  | |__| | |___| |__| | |__| |_| |_| |____ ____) |
+ /_/    \_\_| \_/_/    \_\_| \_|  |_|  |_|  |_|\____/ \____/|_____/     |_|  |______\_____|_|  |_|_| \_|\____/|______\____/ \_____|_____|______|_____/ 
+                                                                                                                                                       
+                                                                                                                                                       
+Ananymoos Technologies was founded on December 28, 2021, founded by Ananymoos. 
+Ananymoos Technologies is a powerful organization, ran by powerful developers and people. 
+We have founded, created, forked, hosted, and even destroyed several projects. We hope to see you soon in our future projects!
+-->
+<html>
+<head>
+<meta name="viewport" content="width 1280, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="/images/trippy.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="/images/trippy.png" type="image/x-icon" href="/images/trippy.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Ananymoos Technologies</title>
+  <link rel="/images/trippy.ico" type="image/x-icon" href="/images/trippy.ico">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta content="Ananymoos Technologies" property="og:title" />
+    <meta content="A powerful organization ran by developers." property="og:description" />
+    <meta content="https://ananymoos-tech.cf" property="og:url" />
+<meta content="/images/trippy.png" property="twitter:image" />
+    <meta content="#000000" data-react-helmet="true" name="theme-color" />
+    <meta name="keywords" content="Vanilla,script hub,tested,Vanilla script, tested script hub ,synapsex,synapse x,sxlib,sx lib,enhanced, Ananymoos, Ananymoos Technologies, AT" />
+<script>
+
+                    var TxtType = function(el, toRotate, period) {
+                this.toRotate = toRotate;
+                this.el = el;
+                this.loopNum = 0;
+                this.period = parseInt(period, 10) || 2000;
+                this.txt = '';
+                this.tick();
+                this.isDeleting = false;
+            };
+        
+            TxtType.prototype.tick = function() {
+                var i = this.loopNum % this.toRotate.length;
+                var fullTxt = this.toRotate[i];
+        
+                if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+                } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+                }
+        
+                this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+        
+                var that = this;
+                var delta = 200 - 100;
+        
+                if (this.isDeleting) { delta /= 2; }
+        
+                if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+                } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+                }
+        
+                setTimeout(function() {
+                that.tick();
+                }, delta);
+            };
+        
+            window.onload = function() {
+                var elements = document.getElementsByClassName('typewrite');
+                for (var i=0; i<elements.length; i++) {
+                    var toRotate = elements[i].getAttribute('data-type');
+                    var period = elements[i].getAttribute('data-period');
+                    if (toRotate) {
+                      new TxtType(elements[i], JSON.parse(toRotate), period);
+                    }
+                }
+                // INJECT CSS
+                var css = document.createElement("style");
+                css.type = "text/css";
+                css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+                document.body.appendChild(css);
+                
+            };
+
+
+            
+        </script>
+<style>
+            @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap");
+            @font-face {
+                font-family: 'main';
+                src: url('https://dropcheats.cc/assets/fonts/gc.ttf');
+            }
+
+            body {
+                margin: 0 auto;
+                background: rgb(30, 30, 30);
+                background: linear-gradient(90deg, rgba(30, 30, 30, 1) 0%, rgba(25, 25, 25, 1) 33.3%, rgba(20, 20, 20, 1) 66.6%, rgba(15, 10, 10, 1) 100%);
+                color: #fff;
+                font-family: "Nunito";
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                min-height: 100vh;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            .title {
+                font-size: 28px;
+                font-weight: bold;
+                position: relative;
+                text-align: center;
+            }
+            .title a {
+                color: #fff;
+                position: relative;
+            }
+            .main {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                min-height: 100vh;
+            }
+            .title a::before {
+                position: absolute;
+                content: attr(data-text);
+                text-shadow: 0px 0px 20px var(--var-color);
+                filter: blur(10px) brightness(0);
+                animation: flicker 2s infinite;
+            }
+            @keyframes flicker {
+                0% {
+                    filter: blur(5px) brightness(1);
+                }
+                3% {
+                    filter: blur(5px) brightness(0);
+                }
+                6% {
+                    filter: blur(5px) brightness(0);
+                }
+                7% {
+                    filter: blur(5px) brightness(1);
+                }
+                8% {
+                    filter: blur(5px) brightness(0);
+                }
+                9% {
+                    filter: blur(5px) brightness(1);
+                }
+                10% {
+                    filter: blur(5px) brightness(0);
+                }
+                20% {
+                    filter: blur(5px) brightness(1);
+                }
+                50% {
+                    filter: blur(5px) brightness(1);
+                }
+                99% {
+                    filter: blur(5px) brightness(0);
+                }
+                100% {
+                    filter: blur(5px) brightness(1);
+                }
+            }
+        </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="project">
+    <img src="/pages/dhm-images/default-img.png" width="50" height="50" alt="Image">
+    <div class="project-details">
+      <h2>Teefus</h2>
+      <p>Dishonorable affiliate of Ananymoos Technologies</p>
+      <div class="button-container">
+        <a class="download-button" href="" onclick="alert('This function is coming soon.'); return true;">Unavailable</a>
+        <a class="info-button" href="" onclick="alert('This information is coming soon'); return true;">Info</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="project">
+    <img src="/pages/dhm-images/default-img.png" width="50" height="50" alt="Image">
+    <div class="project-details">
+      <h2>Austin</h2>
+      <p>Dishonorable affiliate of Ananymoos Technologies</p>
+      <div class="button-container">
+        <a class="download-button" href="" onclick="alert('This function is coming soon.'); return true;">Unavailable</a>
+        <a class="info-button" href="" onclick="alert('This information is coming soon.'); return true;">Info</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="project">
+    <img src="/pages/dhm-images/default-img.png" width="50" height="50" alt="Image">
+    <div class="project-details">
+      <h2>Nicole</h2>
+      <p>Dishonorable affiliate of Ananymoos Technologies</p>
+      <div class="button-container">
+        <a class="download-button" href="" onclick="alert('This function is coming soon'); return true;">Unavailable</a>
+        <a class="info-button" href="" onclick="alert('This information is coming soon.'); return true;">Info</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="project">
+    <img src="/pages/dhm-images/skeletonpro-img.jpg" width="50" height="50" alt="Image"style="border-radius: 50%;">
+    <div class="project-details">
+      <h2>Skeleton Pro</h2>
+      <p>Dishonorable affiliate of Ananymoos Technologies</p>
+      <div class="button-container">
+        <a class="download-button" href="" onclick="alert('This function is coming soon'); return true;">Unavailable</a>
+        <a class="info-button" href="" onclick="alert('This information is coming soon.'); return true;">Info</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="project">
+    <img src="/pages/dhm-images/default-img.png" width="50" height="50" alt="Image"style="border-radius: 50%;">
+    <div class="project-details">
+      <h2>Name</h2>
+      <p>Dishonorable affiliate of Ananymoos Technologies</p>
+      <div class="button-container">
+        <a class="download-button" href="" onclick="alert('This function is coming soon'); return true;">Unavailable</a>
+        <a class="info-button" href="" onclick="alert('This information is coming soon.'); return true;">Info</a>
+      </div>
+    </div>
+  </div>
+
+</div> <!-- Ending the main project container div -->
+
+<style>
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+}
+
+.project img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.project-details h2 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+}
+
+.project-details p {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+}
+  
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 10px;
+  background-color: rgb(37, 37, 37);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 250px;
+}
+
+.download-button:hover,
+.info-button:hover {
+  background-color: rgb(27, 27, 27);
+}
+
+.info-button {
+  display: inline-block;
+  padding: 10px;
+  background-color: rgb(37, 37, 37);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 250px;
+}
+  .download-button, .info-button {
+  cursor: pointer;
+}
+
+</style>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@1.39.0/tsparticles.min.js"></script>
+<script>
+        tsParticles.load("tsparticles", {
+        fpsLimit: 200,
+        interactivity: {
+            events: {
+            onClick: {
+                enable: false,
+                mode: "push"
+            },
+            onHover: {
+                enable: true,
+                mode: "repulse"
+            },
+            resize: true
+            },
+            modes: {
+            bubble: {
+                distance: 400,
+                duration: 2,
+                opacity: 0.8,
+                size: 40
+            },
+            push: {
+                quantity: 4
+            },
+            repulse: {
+                distance: 200,
+                duration: 0.4
+            }
+            }
+        },
+        particles: {
+            color: {
+            value: "#FFFFFF"
+            },
+            links: {
+            color: "#FFFFFF",
+            distance: 150,
+            enable: true,
+            opacity: 1,
+            width: 1
+            },
+            collisions: {
+            enable: true
+            },
+            move: {
+            direction: "none",
+            enable: true,
+            outMode: "bounce",
+            random: false,
+            speed: 3,
+            straight: false
+            },
+            number: {
+            density: {
+                enable: true,
+                value_area: 800
+            },
+            value: 25
+            },
+            opacity: {
+            value: 0.5
+            },
+            shape: {
+            type: "circle"
+            },
+            size: {
+            random: true,
+            value: 5
+            }
+        },
+        detectRetina: true
+        });
+
+        $(".rainx").hide();
+  
+
+        function startup() {
+            
+            $(".start").fadeOut(200);
+            $(".rainx").fadeIn(400);
+
+            var audioElement = document.createElement("audio");
+            const audioElementArray = [
+                "/audio/henryvoidtheme.mp3",
+                "/audio/henrybattletheme.mp3"
+
+            ]
+            const audioName = audioElementArray[Math.floor(Math.random() * audioElementArray.length)]
+            audioElement.setAttribute("src", audioName);
+            audioElement.addEventListener(
+                "ended",
+                function () {
+                    this.volume = 0.5;
+
+                    this.play();
+                },
+                false
+            );
+            audioElement.volume = 0.5;
+            audioElement.play();
+        }
+
+        function one() {
+            window.open("https://google.com");
+        }
+        function email() {
+            window.open("https://paste.ee/d/HDZcJ/0");
+        }
+        function panel() {
+            window.location = "panel.php"; 
+        }
+
+          function infonix() {
+            window.open("https://www.reddit.com/r/robloxhackers/comments/s0zs9r/release_nixgui_an_fe_gui_for_nix_cafe/")
+        }
+
+function downloadNixText() {
+  const fileUrl = '/files/NixGUI.lua';
+  const fileName = 'NixGUI.lua';
+  const tempAnchor = document.createElement('a');
+  tempAnchor.setAttribute('href', fileUrl);
+  tempAnchor.setAttribute('download', fileName);
+  tempAnchor.style.display = 'none';
+  document.body.appendChild(tempAnchor);
+  tempAnchor.click();
+  document.body.removeChild(tempAnchor);
+}
+
+  
+    </script>
+</html>
