@@ -181,6 +181,16 @@ We have founded, created, forked, hosted, and even destroyed several projects. W
                     filter: blur(5px) brightness(1);
                 }
             }
+           body {
+            scrollbar-width: none; /* For Firefox */
+            -ms-overflow-style: none; /* For Internet Explorer and Edge */
+            overflow-y: auto;
+            }
+
+            body::-webkit-scrollbar {
+            width: 0; /* For Chrome, Safari, and Opera */
+            }
+
         </style>
 </head>
 <body>
