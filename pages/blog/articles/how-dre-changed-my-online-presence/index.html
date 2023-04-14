@@ -1,1 +1,390 @@
-coming soon
+<!-- 
+           _   _          _   ___     ____  __  ____   ____   _____   _______ ______ _____ _    _ _   _  ____  _      ____   _____ _____ ______  _____ 
+     /\   | \ | |   /\   | \ | \ \   / /  \/  |/ __ \ / __ \ / ____| |__   __|  ____/ ____| |  | | \ | |/ __ \| |    / __ \ / ____|_   _|  ____|/ ____|
+    /  \  |  \| |  /  \  |  \| |\ \_/ /| \  / | |  | | |  | | (___      | |  | |__ | |    | |__| |  \| | |  | | |   | |  | | |  __  | | | |__  | (___  
+   / /\ \ | . ` | / /\ \ | . ` | \   / | |\/| | |  | | |  | |\___ \     | |  |  __|| |    |  __  | . ` | |  | | |   | |  | | | |_ | | | |  __|  \___ \ 
+  / ____ \| |\  |/ ____ \| |\  |  | |  | |  | | |__| | |__| |____) |    | |  | |___| |____| |  | | |\  | |__| | |___| |__| | |__| |_| |_| |____ ____) |
+ /_/    \_\_| \_/_/    \_\_| \_|  |_|  |_|  |_|\____/ \____/|_____/     |_|  |______\_____|_|  |_|_| \_|\____/|______\____/ \_____|_____|______|_____/ 
+                                                                                                                                                       
+                                                                                                                                                       
+Ananymoos Technologies was founded on December 28, 2021, founded by Ananymoos. 
+Ananymoos Technologies is a powerful organization, ran by powerful developers and people. 
+We have founded, created, forked, hosted, and even destroyed several projects. We hope to see you soon in our future projects!
+-->
+<html>
+<head>
+<meta name="viewport" content="width 1280, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="/images/trippy.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="/images/trippy.png" type="image/x-icon" href="/images/trippy.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Ananymoos Technologies</title>
+  <link rel="/images/trippy.ico" type="image/x-icon" href="/images/trippy.ico">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta content="Ananymoos Technologies" property="og:title" />
+    <meta content="A powerful organization ran by developers." property="og:description" />
+    <meta content="https://ananymoos-tech.cf" property="og:url" />
+<meta content="/images/trippy.png" property="twitter:image" />
+    <meta content="#000000" data-react-helmet="true" name="theme-color" />
+    <meta name="keywords" content="Vanilla,script hub,tested,Vanilla script, tested script hub ,synapsex,synapse x,sxlib,sx lib,enhanced, Ananymoos, Ananymoos Technologies, AT" />
+<script>
+
+                    var TxtType = function(el, toRotate, period) {
+                this.toRotate = toRotate;
+                this.el = el;
+                this.loopNum = 0;
+                this.period = parseInt(period, 10) || 2000;
+                this.txt = '';
+                this.tick();
+                this.isDeleting = false;
+            };
+        
+            TxtType.prototype.tick = function() {
+                var i = this.loopNum % this.toRotate.length;
+                var fullTxt = this.toRotate[i];
+        
+                if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+                } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+                }
+        
+                this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+        
+                var that = this;
+                var delta = 200 - 100;
+        
+                if (this.isDeleting) { delta /= 2; }
+        
+                if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+                } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+                }
+        
+                setTimeout(function() {
+                that.tick();
+                }, delta);
+            };
+        
+            window.onload = function() {
+                var elements = document.getElementsByClassName('typewrite');
+                for (var i=0; i<elements.length; i++) {
+                    var toRotate = elements[i].getAttribute('data-type');
+                    var period = elements[i].getAttribute('data-period');
+                    if (toRotate) {
+                      new TxtType(elements[i], JSON.parse(toRotate), period);
+                    }
+                }
+                // INJECT CSS
+                var css = document.createElement("style");
+                css.type = "text/css";
+                css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+                document.body.appendChild(css);
+                
+            };
+
+
+            
+        </script>
+<style>
+            @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap");
+            @font-face {
+                font-family: 'main';
+                src: url('https://dropcheats.cc/assets/fonts/gc.ttf');
+            }
+
+            body {
+                margin: 0 auto;
+                background: rgb(30, 30, 30);
+                background: linear-gradient(90deg, rgba(30, 30, 30, 1) 0%, rgba(25, 25, 25, 1) 33.3%, rgba(20, 20, 20, 1) 66.6%, rgba(15, 10, 10, 1) 100%);
+                color: #fff;
+                font-family: "Nunito";
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                min-height: 100vh;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            .title {
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            }
+
+            .title a {
+                color: #fff;
+                position: relative;
+            }
+            .main {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                min-height: 100vh;
+            }
+            .title a::before {
+                position: absolute;
+                content: attr(data-text);
+                text-shadow: 0px 0px 20px var(--var-color);
+                filter: blur(10px) brightness(0);
+                animation: flicker 2s infinite;
+            }
+            @keyframes flicker {
+                0% {
+                    filter: blur(5px) brightness(1);
+                }
+                3% {
+                    filter: blur(5px) brightness(0);
+                }
+                6% {
+                    filter: blur(5px) brightness(0);
+                }
+                7% {
+                    filter: blur(5px) brightness(1);
+                }
+                8% {
+                    filter: blur(5px) brightness(0);
+                }
+                9% {
+                    filter: blur(5px) brightness(1);
+                }
+                10% {
+                    filter: blur(5px) brightness(0);
+                }
+                20% {
+                    filter: blur(5px) brightness(1);
+                }
+                50% {
+                    filter: blur(5px) brightness(1);
+                }
+                99% {
+                    filter: blur(5px) brightness(0);
+                }
+                100% {
+                    filter: blur(5px) brightness(1);
+                }
+            }
+            .article-title {
+            font-size: 35px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            text-align: center;
+            display: block;
+            }
+
+            .article-subheading {
+            font-size: 25px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            text-align: center;
+            display: block;
+            }
+
+            .article-timestamp {
+            font-size: 17px;
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: center;
+            display: block;
+            }
+
+            .blog-link {
+            font-size: 19px;
+            margin-top: 5px;
+            display: block;
+            margin-bottom: 5px;
+            cursor: pointer;
+            }
+            .paragraph {
+            font-size: 19px;
+            margin-top: 5px;
+            display: block;
+            margin-bottom: 5px;
+            cursor: pointer;
+            width: 70%;
+            margin: 0 auto;
+            }
+            #content {
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            }
+            body {
+            scrollbar-width: none; /* For Firefox */
+            -ms-overflow-style: none; /* For Internet Explorer and Edge */
+            overflow-y: auto;
+            }
+
+            body::-webkit-scrollbar {
+            width: 0; /* For Chrome, Safari, and Opera */
+            }
+
+        </style>
+</head>
+<body>
+    <h1 class="article-title">How dre changed my online presence</h1>
+    <h2 class="article-subheading">By: Ananymoos</h>
+    <h3 class="article-timestamp">Created on 4/13/2023 | Last updated: 4/13/2023</h>
+        <div class="content">
+        <img style="margin-bottom: 7px;" src="/images/sepal-img.png" alt="Image" width="500" height="300">
+    <p class="paragraph">In around late 2020/early 2021, I was beaming/cookie logging accounts, whilst exploiting. After I beamed an account that didn't have much items, I decided to go back into the game and exploit on it. I joined the community guild of the game. After I joined the guild, I met a person named Rez. I became friends with him, as he was another fellow exploiter, and he was interested in me beaming. I beamed some accounts, he helped me get targets, and I beamed those targets. After Rez talked to me, he put me </p>
+    <p style="margin-top: 10px;"class="paragraph">After a few months when we have finalized the UI and went public, we noticed that there was a message in the general channel, from a user named Aggelos. He explained to us that George has been taking code from Aggelos's project, Summer SS, without permission. I didn't believe Aggelos, because I knew George for a while and I thought George would never do something like this. So George would come to deny that fact by banning Aggelos.</p>
+    <p style="margin-top: 10px;"class="paragraph">After Aggelos was banned, I believe tacolift was in the server that time. Tacolift DM'd Aggelos and Aggelos supplied proof. Tacolift also tested Harv's skills about LUA, who was another owner of Sepal. He asked basic questions like naming a metamethod, a global, etc. and Harv was unable to answer them. Tacolift then published a CW on Harv and on Sepal.</p>
+    <p style="margin-top: 10px;"class="paragraph">After the CW, me and Tacolift mostly just argued against each other, about Sepal, skidding, etc. After a few hours I randomly decided to ask him for his opinion on one of my projects, NixGUI, and if the UI is good, etc. After he gave me his honest opinion, we just talked and talked. We were talking for a few months, until Tacolift invited me to co-create one of his projects. After that, I decided to ask him what he thinks of me and if we are friends, and he agreed and said yes.</p>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@1.39.0/tsparticles.min.js"></script>
+<script>
+        tsParticles.load("tsparticles", {
+        fpsLimit: 200,
+        interactivity: {
+            events: {
+            onClick: {
+                enable: false,
+                mode: "push"
+            },
+            onHover: {
+                enable: true,
+                mode: "repulse"
+            },
+            resize: true
+            },
+            modes: {
+            bubble: {
+                distance: 400,
+                duration: 2,
+                opacity: 0.8,
+                size: 40
+            },
+            push: {
+                quantity: 4
+            },
+            repulse: {
+                distance: 200,
+                duration: 0.4
+            }
+            }
+        },
+        particles: {
+            color: {
+            value: "#FFFFFF"
+            },
+            links: {
+            color: "#FFFFFF",
+            distance: 150,
+            enable: true,
+            opacity: 1,
+            width: 1
+            },
+            collisions: {
+            enable: true
+            },
+            move: {
+            direction: "none",
+            enable: true,
+            outMode: "bounce",
+            random: false,
+            speed: 3,
+            straight: false
+            },
+            number: {
+            density: {
+                enable: true,
+                value_area: 800
+            },
+            value: 25
+            },
+            opacity: {
+            value: 0.5
+            },
+            shape: {
+            type: "circle"
+            },
+            size: {
+            random: true,
+            value: 5
+            }
+        },
+        detectRetina: true
+        });
+
+        $(".rainx").hide();
+  
+
+        function startup() {
+            
+            $(".start").fadeOut(200);
+            $(".rainx").fadeIn(400);
+
+            var audioElement = document.createElement("audio");
+            const audioElementArray = [
+                "/audio/henryvoidtheme.mp3",
+                "/audio/henrybattletheme.mp3",
+                "/audio/flipsidetheme.mp3",
+                "/audio/henrytheme.mp3",
+                "/audio/shadowbonnietheme.mp3"
+
+            ]
+            const audioName = audioElementArray[Math.floor(Math.random() * audioElementArray.length)]
+            audioElement.setAttribute("src", audioName);
+            audioElement.addEventListener(
+                "ended",
+                function () {
+                    this.volume = 0.5;
+
+                    this.play();
+                },
+                false
+            );
+            audioElement.volume = 0.5;
+            audioElement.play();
+        }
+        function directory() {
+            window.open("https://ananymoos-tech.cf/pages/directory.html");
+        }
+        function meetingtacolift() {
+            window.open("/pages/blog/articles/how-i-met-tacolift");
+        }
+        function panel() {
+            window.location = "panel.php"; 
+        }
+    </script>
+    <style>
+        .banner {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 30px;
+          background-color: rgb(30, 30, 30);
+          text-align: center; /* Updated value */
+          font-size: 14px;
+          line-height: 7px;
+        }
+    </style>
+</html>
