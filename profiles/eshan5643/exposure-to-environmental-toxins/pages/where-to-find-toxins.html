@@ -22,6 +22,7 @@ This project's design elements have the correct consent from the owner; Ananymoo
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Exposure to Environmental Toxins</title>
+  <link rel="/images/trippy.ico" type="image/x-icon" href="/images/trippy.ico">
   <link href="style.css" rel="stylesheet" type="text/css" />
     <meta content="Exposure to Environmental Toxins" property="og:title" />
     <meta content="Presented by Eshan Zaman, Umar Sheikh. Muhammad Shwaiz, and Mert Mahmutoglu" property="og:description" />
@@ -180,44 +181,84 @@ This project's design elements have the correct consent from the owner; Ananymoo
                     filter: blur(5px) brightness(1);
                 }
             }
+            .article-title {
+            font-size: 35px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            text-align: center;
+            display: block;
+            }
+
+            .article-subheading {
+            font-size: 25px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            text-align: center;
+            display: block;
+            }
+
+            .article-timestamp {
+            font-size: 17px;
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: center;
+            display: block;
+            }
+
+            .blog-link {
+            font-size: 19px;
+            margin-top: 5px;
+            display: block;
+            margin-bottom: 5px;
+            cursor: pointer;
+            }
+            .paragraph {
+            font-size: 19px;
+            margin-top: 30px;
+            display: block;
+            margin-bottom: 30px;
+            cursor: pointer;
+            width: 80%;
+            margin: 0 auto;
+            }
+            #content {
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            }
+            body {
+            scrollbar-width: none; /* For Firefox */
+            -ms-overflow-style: none; /* For Internet Explorer and Edge */
+            overflow-y: auto;
+            }
+
+            body::-webkit-scrollbar {
+            width: 0; /* For Chrome, Safari, and Opera */
+            }
         </style>
 </head>
 <body>
-<div class="main start">
-<label class="title" style="opacity: 0.6; font-size: 13px;" onmousedown="startup();">
-click<br />
-here<br />
-to<br />
-start
-</label>
-</div>
-<div class="main rainx">
 <label class="title">
-    	<header>
-<div class="banner">
-  <p>Presented by Eshan Zaman, Umar Sheikh, Muhammad Shwaiz, Mert Mahmutoglu, and Daud Moazzam</p>
-</div>
-</header>
-<img src="/profiles/eshan5643/exposure-to-environmental-toxins/images/main2.png" alt="" width="150" height="150">
+<!-->
+
+<!-->
 </label>
 <label class="title">
-Exposure to <a id="flicker" data-text="Toxins" style="color: #0FFF50;">Toxins</a><br />
-The information, risks, and methods to combat it<a id="flicker" data-text="" style="color: #f157ff;"></a><br />
-<a style="font-size: 12px; opacity: 0.7; cursor: pointer;" onmousedown="info();">General Information</a>
-<a style="font-size: 12px;cursor: pointer;">|</a>
-  <a style="font-size: 12px; opacity: 0.7; cursor: pointer;" onmousedown="risks();">Known Risks</a>
-  <a style="font-size: 12px;cursor: pointer;">|</a>
-      <a style="font-size: 12px; opacity: 0.7; cursor: pointer;" onmousedown="harms();">Harm to Life</a>
-  <a style="font-size: 12px;cursor: pointer;">|</a>
-  <a style="font-size: 12px; opacity: 0.7; cursor: pointer;" onmousedown="combat();">Ways to Combat</a>
-    <a style="font-size: 12px;cursor: pointer;">|</a>
-    <a style="font-size: 12px; opacity: 0.7; cursor: pointer;" onmousedown="findingtoxins();">Where to Find Toxins</a>
-    <a style="font-size: 12px;cursor: pointer;">|</a>
-  <a style="font-size: 12px; opacity: 0.7; cursor: pointer;" onmousedown="closing();">Closing</a>
-  <a style="font-size: 12px;cursor: pointer;">|</a>
-<a style="font-size: 12px; opacity: 0.7; cursor: pointer;" onmousedown="team();">Group Members</a>
+    Where to Find <a id="flicker" data-text="Toxins" style="color: #FFFFFF;">Toxins</a><br />
+  <label>
+    <label class="title a">
+  <p>By: Daud Moazzam</p>
+    <img src="/profiles/eshan5643/exposure-to-environmental-toxins/images/findingtoxins-img.png" alt="" width="500" height="250">
+      <br>
+      <br>
+  <p class="paragraph">Toxins can be found in living things like plants, fungi, bacteria and animals. All though Some of these toxins don't hurt the organisms that produce it, it can be very harmful for the person that consumes the food that has these toxins.</p>
+      <br>
+  <p class="paragraph">Toxins can also be found in the ocean or lakes like microscopic algae and plankton. Fish and shellfish that eat microscopic algae and plankton can't be harmed but when people that eat shellfish and fish that contain these toxins can make illness rapidly follow.</p>
 <br>
-  <a class="typewrite" data-period="200" data-type='["Presented by Eshan Zaman, Umar Sheikh, Muhammad Shwaiz, Mert Mahmutoglu, and Daud Moazzam", "This project is using design elements from Ananymoos Technologies with the correct permissions.", "Website design by Eshan Zaman."]' style="font-size: 10px; opacity: 0.5;">at on top</a>
 </br>
 </label>
 </div>
@@ -234,10 +275,9 @@ The information, risks, and methods to combat it<a id="flicker" data-text="" sty
             },
             onHover: {
                 enable: true,
-                // mode: "repulse"
+                mode: "repulse"
             },
             resize: true
-              
             },
             modes: {
             bubble: {
@@ -257,10 +297,10 @@ The information, risks, and methods to combat it<a id="flicker" data-text="" sty
         },
         particles: {
             color: {
-            value: "#0FFF50"
+            value: "#FFFFFF"
             },
             links: {
-            color: "#0FFF50",
+            color: "#FFFFFF",
             distance: 150,
             enable: true,
             opacity: 1,
@@ -308,7 +348,15 @@ The information, risks, and methods to combat it<a id="flicker" data-text="" sty
           
             var audioElement = document.createElement("audio");
             const audioElementArray = [
-                       "nil"
+                "/audio/henrythemevoid.mp3",
+                "/audio/henrybattletheme.mp3",
+                "/audio/flipsidetheme.mp3",
+                "/audio/henrytheme1.mp3",
+                "/audio/henrytheme2.mp3",
+                "/audio/frostmusic.mp3",
+                "/audio/cmw.mp3",
+                "/audio/shadowbonnietheme.mp3"
+
             ]
             const audioName = audioElementArray[Math.floor(Math.random() * audioElementArray.length)]
             audioElement.setAttribute("src", audioName);
@@ -324,37 +372,31 @@ The information, risks, and methods to combat it<a id="flicker" data-text="" sty
             audioElement.volume = 0.5;
             audioElement.play();
         }  
-        function info() {
-            window.open("/profiles/eshan5643/exposure-to-environmental-toxins/pages/general-info.html");
+        function updates() {
+            window.open("updates.html");
         }
-        function risks() {
-            window.open("/profiles/eshan5643/exposure-to-environmental-toxins/pages/risks.html");
+        function directory() {
+            window.open("/pages/directory.html");
         }
-  function harms() {
-            window.open("/profiles/eshan5643/exposure-to-environmental-toxins/pages/harm-to-life.html");
+  function projects() {
+            window.open("/pages/projects.html");
         }
-    function combat() {
-            window.open("/profiles/eshan5643/exposure-to-environmental-toxins/pages/combat.html");
-        }
-    function team() {
-            window.open("/profiles/eshan5643/exposure-to-environmental-toxins/pages/group.html");
-        }
-    function findingtoxins() {
-            window.open("/profiles/eshan5643/exposure-to-environmental-toxins/pages/where-to-find-toxins.html");
-        }
-      function closing() {
-            window.location.replace("/profiles/eshan5643/exposure-to-environmental-toxins/pages/closing.html");
+  /*
+function func1() {
+  var copyText = document.createElement("textarea");
+  copyText.value = "Ensuring that the air in one's home is fresh is not a new concept. In ancient times, people used various methods to purify the air in their homes, such as burning incense or using plants like lavender to freshen the air. However, with the advancement of technology and the increase in industrialization, air pollution has become a significant concern. According to the World Health Organization, air pollution is responsible for an estimated 7 million premature deaths worldwide each year. In recent years, researchers have also investigated the impact of environmental toxins on human health. A study published in the Lancet Public Health journal in 2019 estimated that exposure to environmental toxins contributed to 1.7 million deaths among children under the age of 5 in 2017. When it comes to household cleaning products, the Environmental Working Group (EWG) has conducted extensive research and found that many conventional cleaning products contain chemicals that can be harmful to human health and the environment. In fact, according to the EWG, some cleaning products contain ingredients that are known or suspected to cause cancer, reproductive harm, and other health issues. Limiting the use of plastics and nonstick cookware is also important as these materials can contain harmful chemicals like BPA and PFAS. The use of these chemicals in consumer products has been a topic of debate for many years, with some studies suggesting a link between exposure to these chemicals and adverse health effects. Overall, taking steps to reduce exposure to environmental toxins in the home is an important part of maintaining good health.";
+  document.body.appendChild(copyText);
+  copyText.select();
+  document.execCommand("copy");
+  document.body.removeChild(copyText);
+  alert("Text copied!");
+} */
+      function dhm() {
+            window.open("/pages/dishonorable-mentions.html");
         }
         function panel() {
             window.location = "panel.php"; 
         }
-      /*
-      info()
-      risks()
-      harms()
-      combat()
-      team()
-*/
     </script>
 
   	<style>
